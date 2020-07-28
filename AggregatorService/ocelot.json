@@ -1,0 +1,51 @@
+{
+  "Routes": [
+
+    {
+      "DownstreamPathTemplate": "/api/order/GetOrder",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "order-service",
+          "Port": "9000"
+        }
+      ],
+      "UpstreamPathTemplate": "/order",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Order",
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": true
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/user/GetUserbyid?id={id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-service",
+          "Port": "9001"
+        }
+      ],
+      "UpstreamPathTemplate": "/users/{id}",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "Key": "User",
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": true
+      }
+    }
+
+  ],
+
+  "Aggregates": [
+    {
+      "RouteKeys": [
+        "User",
+        "Order"
+      ],
+      "UpstreamPathTemplate": "/GetOrders/{id}"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:9002/"
+  }
+}

@@ -3,7 +3,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:9001"
+      "applicationUrl": "http://localhost:9001",
+      "sslPort": 0
     }
   },
   "profiles": {
@@ -13,15 +14,6 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
-    },
-    "UserService": {
-      "commandName": "Project",
-      "anonymousAuthentication": true,
-      "launchBrowser": true,
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "applicationUrl": "http://localhost:9001"
     },
     "Docker": {
       "commandName": "Docker",

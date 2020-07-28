@@ -3,7 +3,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:9000" 
+      "applicationUrl": "http://localhost:9000",
+      "sslPort": 0
     }
   },
   "profiles": {
@@ -14,20 +15,11 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "OrderService": {
-      "anonymousAuthentication": true,
-      "commandName": "Project",
-      "launchBrowser": true,
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "applicationUrl": "http://localhost:9000"
-    },
     "Docker": {
       "commandName": "Docker",
       "launchBrowser": true,
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
-      "publishAllPorts": true 
+      "publishAllPorts": true
     }
   }
 }

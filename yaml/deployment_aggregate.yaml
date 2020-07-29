@@ -16,7 +16,7 @@ spec:
   spec:
    containers:
     - name: aggregatorservice-container
-      image: onkarsngh11/aggregatorservicev1:latest
+      image: onkarsngh11/userservice:aggregatorservicev1
       ports:
        - containerPort: 9002
       type:LoadBalancer

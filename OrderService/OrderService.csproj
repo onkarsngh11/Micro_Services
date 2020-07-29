@@ -4,6 +4,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UserSecretsId>925d16bb-82b7-4e9c-a67c-23b921e9332e</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileTag>OrderService</DockerfileTag>
   </PropertyGroup>
 
   <ItemGroup>

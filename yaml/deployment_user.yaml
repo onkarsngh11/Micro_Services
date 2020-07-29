@@ -16,6 +16,6 @@ spec:
   spec:
    containers:
     - name: userservice-container
-      image: asdocker1987/userservicev1:latest
+      image: onkarsngh11/userservicev1:latest
       ports:
        - containerPort: 9001

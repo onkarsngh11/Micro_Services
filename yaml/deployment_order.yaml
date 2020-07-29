@@ -16,6 +16,6 @@ spec:
   spec:
    containers:
     - name: orderservice-container
-      image: onkarsngh11/userservice:orderservicev1
+      image: onkarsngh11/orderservice:v1
       ports:
        - containerPort: 9000

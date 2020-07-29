@@ -16,6 +16,6 @@ spec:
   spec:
    containers:
     - name: aggregatorservice-container
-      image: onkarsngh11/userservice:aggregatorservicev1
+      image: onkarsngh11/aggregatorservice:v1
       ports:
        - containerPort: 9002

@@ -16,6 +16,6 @@ spec:
   spec:
    containers:
     - name: userservice-container
-      image: onkarsngh11/userservice:userservicev1
+      image: onkarsngh11/userservice:v1
       ports:
        - containerPort: 9001

@@ -24,7 +24,7 @@
         {
           "Host": "user-service",
           "Port": "9001"
-        }
+        }c
       ],
       "UpstreamPathTemplate": "/users/{id}",
       "UpstreamHttpMethod": [ "Get", "Post" ],

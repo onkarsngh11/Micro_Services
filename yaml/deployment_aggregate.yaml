@@ -19,3 +19,4 @@ spec:
       image: onkarsngh11/aggregatorservicev1:latest
       ports:
        - containerPort: 9002
+      type:LoadBalancer

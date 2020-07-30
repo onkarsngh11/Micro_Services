@@ -6,10 +6,10 @@ EXPOSE 9002
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["AggregatorService/AggregatorService.csproj", "AggregatorService/"]
-RUN dotnet restore "AggregatorService/AggregatorService.csproj"
+COPY ["AggregatorService.csproj", ""]
+RUN dotnet restore "./AggregatorService.csproj"
 COPY . .
-WORKDIR "/src/AggregatorService"
+WORKDIR "/src/."
 RUN dotnet build "AggregatorService.csproj" -c Release -o /app/build
 
 FROM build AS publish

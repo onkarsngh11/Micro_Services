@@ -6,10 +6,10 @@ EXPOSE 9000
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["OrderService/OrderService.csproj", "OrderService/"]
-RUN dotnet restore "OrderService/OrderService.csproj"
+COPY ["OrderService.csproj", ""]
+RUN dotnet restore "./OrderService.csproj"
 COPY . .
-WORKDIR "/src/OrderService"
+WORKDIR "/src/."
 RUN dotnet build "OrderService.csproj" -c Release -o /app/build
 
 FROM build AS publish

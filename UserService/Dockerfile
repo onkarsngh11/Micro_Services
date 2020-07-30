@@ -23,4 +23,4 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENV ASPNETCORE_URLS http://*:9001
-ENTRYPOINT ["dotnet", "UserService.dll"]w
+ENTRYPOINT ["dotnet", "UserService.dll"]
